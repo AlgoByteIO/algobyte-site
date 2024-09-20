@@ -57,17 +57,21 @@ main {
     .content-section {
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .content-section:nth-child(even) {
+        flex-direction: row-reverse;
     }
 
     .content-section img {
-        width: 25%;
-        margin-right: 20px;
-        margin-bottom: 0;
+        width: 40%;
+        max-width: 400px;
+        margin: 0 20px;
     }
 
     .text-content {
-        flex: 1;
+        width: 60%;
         text-align: left;
     }
 
