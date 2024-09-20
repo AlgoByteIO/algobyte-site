@@ -80,7 +80,7 @@
 /* Header Styles */
 header {
     background-color: var(--accent-color);
-    padding: 15px 0; /* Increased padding for a larger header */
+    padding: 15px 0;
 }
 
 header nav ul {
@@ -98,9 +98,9 @@ header nav ul li {
 
 header nav ul li a {
     display: block;
-    padding: 12px 18px; /* Increased padding for larger clickable area */
-    font-size: 1.2rem; /* Increased font size */
-    font-weight: bold; /* Made text bold for emphasis */
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 
@@ -109,4 +109,18 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: auto;
+}
+
+/* Main Title Styles */
+.main-title {
+    font-family: 'CustomFont2', sans-serif;
+    font-weight: bold;
+    font-size: 7rem;
+    text-align: center;
+    margin: 4rem 0 2rem;
+    color: var(--text-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
