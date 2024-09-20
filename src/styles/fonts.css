@@ -1,0 +1,44 @@
+/* Font Face Declarations */
+@font-face {
+    font-family: 'NeueBit';
+    src: url('../assets/fonts/NeueBit/NeueBit-Regular.woff2') format('woff2'),
+         url('../assets/fonts/NeueBit/NeueBit-Regular.woff') format('woff'),
+         url('../assets/fonts/NeueBit/NeueBit-Regular.ttf') format('truetype'),
+         url('../assets/fonts/NeueBit/NeueBit-Regular.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeueBit';
+    src: url('../assets/fonts/NeueBit/NeueBit-Bold.woff2') format('woff2'),
+         url('../assets/fonts/NeueBit/NeueBit-Bold.woff') format('woff'),
+         url('../assets/fonts/NeueBit/NeueBit-Bold.ttf') format('truetype'),
+         url('../assets/fonts/NeueBit/NeueBit-Bold.eot') format('embedded-opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mondwest';
+    src: url('../assets/fonts/Mondwest/Mondwest-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Mondwest/Mondwest-Regular.woff') format('woff'),
+         url('../assets/fonts/Mondwest/Mondwest-Regular.ttf') format('truetype'),
+         url('../assets/fonts/Mondwest/Mondwest-Regular.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mondwest';
+    src: url('../assets/fonts/Mondwest/Mondwest-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Mondwest/Mondwest-Bold.woff') format('woff'),
+         url('../assets/fonts/Mondwest/Mondwest-Bold.ttf') format('truetype'),
+         url('../assets/fonts/Mondwest/Mondwest-Bold.eot') format('embedded-opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

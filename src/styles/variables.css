@@ -1,0 +1,8 @@
+/* CSS Variables */
+:root {
+    --bg-color: #0a1929;
+    --text-color: #e0e0e0;
+    --accent-color: #3a506b;
+    --hover-color: #48a9a6;
+    --border-color: #1e3a5f;
+}

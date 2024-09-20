@@ -1,0 +1,31 @@
+/* Global Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'NeueBit', sans-serif;
+}
+
+h4, h5, p {
+    font-family: 'Mondwest', sans-serif;
+}
+
+a {
+    font-family: 'Mondwest', sans-serif;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}

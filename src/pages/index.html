@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preload" href="../assets/fonts/NeueBit/NeueBit-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Mondwest/Mondwest-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#veil">Veil</a></li>
+                    <li><a href="#releases">Releases</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li>
+                        <a href="#" id="modal-open" class="modal-open">•••</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-info">
+                <h1 class="company-name">AlgoByte</h1>
+                <hr class="separator">
+                <p class="description">AI Solutions Company</p>
+                <hr class="separator">
+                <div class="external-links">
+                    <a href="#veil">Veil</a>
+                    <a href="#releases">Releases</a>
+                    <a href="#blog">Blog</a>
+                    <a href="https://github.com/AlgoByteIO" target="_blank">GitHub</a>
+                    <a href="mailto:info@algobyte.io">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <main>
+            <section id="section1" class="content-section">
+                <img src="../assets/images/AppliedML.svg" alt="Section 1 Image">
+                <div class="text-content">
+                    <h2>Applied Machine Learning</h2>
+                    <p>We build machine learning models that fit your exact requirements. From supervised to unsupervised techniques, our solutions integrate seamlessly into your operations, enhancing performance and efficiency without the fluff.</p>
+                </div>
+            </section>
+
+            <hr class="section-separator">
+
+            <section id="section2" class="content-section">
+                <img src="../assets/images/DataSynthesisAnalysis.svg" alt="Section 2 Image">
+                <div class="text-content">
+                    <h2>Data Synthesis and Analysis</h2>
+                    <p>We collect, merge, and process your data to deliver clear, actionable insights. Our streamlined approach ensures your data is accurate and organized, supporting precise decision-making and strategic initiatives.</p>
+                </div>
+            </section>
+
+            <hr class="section-separator">
+
+            <section id="section3" class="content-section">
+                <img src="../assets/images/HypeFree.svg" alt="Section 3 Image">
+                <div class="text-content">
+                    <h2>Commitment to Hype-Free AI</h2>
+                    <p>Our focus is on reliable AI that works quietly and effectively behind the scenes. We deliver straightforward, functional solutions that integrate smoothly with your existing systems, ensuring technology serves your mission without unnecessary complexity.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>AlgoByte &copy; 2024 </p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById("modal");
+        const modalOpen = document.getElementById("modal-open");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        modalOpen.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+</body>
+</html>
