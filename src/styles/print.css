@@ -1,0 +1,63 @@
+/* Print Styles */
+@media print {
+    /* Hide non-essential elements */
+    header nav,
+    .skip-to-main,
+    .modal,
+    .modal-open {
+        display: none;
+    }
+
+    /* Optimize colors and backgrounds */
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+    }
+
+    /* Ensure images are printed properly */
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    /* Add URLs after links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: black;
+    }
+
+    /* Avoid page breaks inside sections */
+    .content-section {
+        page-break-inside: avoid;
+        margin: 20pt 0;
+        color: black;
+    }
+
+    /* Optimize text for print */
+    .text-content {
+        width: 100%;
+        text-align: left;
+        color: black;
+    }
+
+    /* Remove decorative elements */
+    .section-separator {
+        border-top: 1pt solid #000;
+        background: none;
+        margin: 15pt auto;
+    }
+
+    /* Footer modifications */
+    footer {
+        margin-top: 20pt;
+        border-top: 1pt solid #000;
+        color: black;
+    }
+
+    /* Ensure AlgoByte title is black */
+    .main-title {
+        color: black;
+    }
+}

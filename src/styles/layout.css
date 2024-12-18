@@ -19,7 +19,7 @@ main {
 
 .content-section img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     margin-bottom: var(--space-4);
 }
 
@@ -60,15 +60,14 @@ main {
         align-items: center;
         gap: 40px;
     }
-
     /* Target every other content-section */
     .content-section:nth-of-type(2n) {
         flex-direction: row-reverse;
     }
 
     .content-section img {
-        width: 40%;
-        max-width: 400px;
+        width: 35%;
+        max-width: 350px;
         margin: 0;
     }
 
