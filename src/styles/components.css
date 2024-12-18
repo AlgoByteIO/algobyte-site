@@ -15,31 +15,34 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: var(--space-4);
     box-sizing: border-box;
 }
 
 .close {
     color: var(--text-color);
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 28px;
+    top: var(--space-4);
+    right: var(--space-6);
+    font-size: var(--text-xl);
     font-weight: bold;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: var(--space-2);
 }
 
 .modal-info {
     position: absolute;
-    top: 50px;
-    right: 30px;
+    top: var(--space-12);
+    right: var(--space-6);
     text-align: right;
     max-width: 300px;
 }
 
 .company-name {
-    margin-bottom: 20px;
-    font-size: 3.5rem;
+    margin-bottom: var(--space-4);
+    font-size: var(--text-3xl);
     font-family: 'CustomFont2', sans-serif;
 }
 
@@ -53,25 +56,25 @@
         transparent 4px,
         transparent 8px
     );
-    margin: 30px 0;
+    margin: var(--space-6) 0;
     width: 100%;
 }
 
 .description {
     font-family: 'CustomFont1', sans-serif;
-    font-size: 2.5rem;
-    margin: 20px 0;
+    font-size: var(--text-2xl);
+    margin: var(--space-4) 0;
 }
 
 .external-links {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 10px;
+    gap: var(--space-2);
 }
 
 .external-links a {
-    font-size: 1.6rem;
+    font-size: var(--text-lg);
 }
 
 .modal-open {
@@ -82,7 +85,7 @@
 /* Header Styles */
 header {
     background-color: var(--accent-color);
-    padding: 15px 0;
+    padding: var(--space-3) 0;
 }
 
 header nav ul {
@@ -100,8 +103,8 @@ header nav ul li {
 
 header nav ul li a {
     display: block;
-    padding: 12px 18px;
-    font-size: 1.2rem;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
     font-weight: bold;
 }
 
@@ -117,12 +120,28 @@ footer {
 .main-title {
     font-family: 'CustomFont2', sans-serif;
     font-weight: bold;
-    font-size: 7rem;
+    font-size: var(--text-5xl);
     text-align: center;
-    margin: 4rem 0 2rem;
+    margin: var(--space-16) 0 var(--space-8);
     color: var(--text-color);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: var(--space-4);
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    opacity: 0;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
 }

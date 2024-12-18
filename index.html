@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgoByte</title>
+    <meta name="description" content="AlgoByte - AI Solutions Company specializing in Applied Machine Learning, Data Synthesis, and Hype-Free AI implementations">
+    <meta name="keywords" content="AI, Machine Learning, Data Analysis, AI Solutions">
+    <meta name="author" content="AlgoByte">
+    <meta property="og:title" content="AlgoByte - AI Solutions">
+    <meta property="og:description" content="Delivering straightforward, functional AI solutions that integrate smoothly with your existing systems">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://algobyte.io">
+
+    <title>AlgoByte | AI Solutions Company</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="src/styles/main.css" as="style">
     <link rel="stylesheet" href="src/styles/main.css">
-    <!-- Custom fonts - Do not download or use without permission -->
+
+    <!-- Custom fonts with optimized loading -->
     <link rel="preload" href="src/assets/fonts/Custom1/CustomFont1-A.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="src/assets/fonts/Custom2/CustomFont2-A.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="src/assets/fonts/Custom2/CustomFont2-B.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <!-- Defer non-critical scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <header>
         <div class="container">
             <nav>
@@ -28,11 +42,11 @@
         </div>
     </header>
 
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <button class="close" aria-label="Close menu">&times;</button>
             <div class="modal-info">
-                <h1 class="company-name">AlgoByte</h1>
+                <h1 id="modal-title" class="company-name">AlgoByte</h1>
                 <hr class="separator">
                 <p class="description">AI Solutions Company</p>
                 <hr class="separator">
@@ -48,14 +62,12 @@
         </div>
     </div>
 
-    <div class="container">
-        <h1 class="main-title">AlgoByte</h1>
-    </div>
-
-    <div class="container">
-        <main>
-            <section id="section1" class="content-section">
-                <img src="src/assets/images/AppliedML.svg" alt="Section 1 Image">
+    <main id="main-content">
+        <div class="container">
+            <h1 class="main-title">AlgoByte</h1>
+            
+            <section class="content-section">
+                <img src="src/assets/images/AppliedML.svg" alt="Applied Machine Learning visualization">
                 <div class="text-content">
                     <h2>Applied Machine Learning</h2>
                     <p>We build machine learning models that fit your exact requirements. From supervised to unsupervised techniques, our solutions integrate seamlessly into your operations, enhancing performance and efficiency without the fluff.</p>
@@ -64,8 +76,8 @@
 
             <hr class="section-separator">
 
-            <section id="section2" class="content-section">
-                <img src="src/assets/images/DataSynthesisAnalysis.svg" alt="Section 2 Image">
+            <section class="content-section">
+                <img src="src/assets/images/DataSynthesisAnalysis.svg" alt="Data Synthesis and Analysis visualization">
                 <div class="text-content">
                     <h2>Data Synthesis and Analysis</h2>
                     <p>We collect, merge, and process your data to deliver clear, actionable insights. Our streamlined approach ensures your data is accurate and organized, supporting precise decision-making and strategic initiatives.</p>
@@ -81,8 +93,8 @@
                     <p>Our focus is on reliable AI that works quietly and effectively behind the scenes. We deliver straightforward, functional solutions that integrate smoothly with your existing systems, ensuring technology serves your mission without unnecessary complexity.</p>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <footer>
         <div class="container">
@@ -90,29 +102,6 @@
         </div>
     </footer>
 
-    <script>
-        // Modal functionality
-        const modal = document.getElementById("modal");
-        const modalOpen = document.getElementById("modal-open");
-        const closeBtn = document.getElementsByClassName("close")[0];
-
-        modalOpen.onclick = function(e) {
-            e.preventDefault();
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                document.body.style.overflow = "auto";
-            }
-        }
-    </script>
+    <script src="src/js/modal.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
 @import 'variables.css';
+@import 'typography.css';
 @import 'fonts.css';
 @import 'global.css';
 @import 'layout.css';
 @import 'components.css';
-@import 'responsive.css';
+@import 'breakpoints.css';
+@import 'print.css';

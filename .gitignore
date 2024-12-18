@@ -37,3 +37,6 @@ yarn-error.log*
 
 # Optional: Uncomment if you're using npm
 # package-lock.json
+
+# Extra
+improvements.md
