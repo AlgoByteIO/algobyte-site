@@ -40,3 +40,4 @@ yarn-error.log*
 
 # Extra
 improvements.md
+.specstory/

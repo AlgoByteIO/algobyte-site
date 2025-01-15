@@ -145,3 +145,12 @@ footer {
     transform: translateX(-50%);
     opacity: 1;
 }
+
+.tagline {
+    text-align: center;
+    font-family: 'CustomFont2', sans-serif;
+    font-size: var(--text-lg);
+    margin: calc(-1 * var(--space-4)) 0 var(--space-16);
+    color: var(--text-color);
+    opacity: 0.8;
+}
