@@ -72,8 +72,20 @@
         text-align: left;
     }
 
+    .text-content h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .text-content p {
+        font-size: var(--text-base);
+    }
+
     header nav ul li {
         display: inline-block;
+    }
+
+    .section-separator {
+        width: calc(100% - var(--space-12));
     }
 }
 
