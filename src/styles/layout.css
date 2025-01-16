@@ -36,6 +36,7 @@ main {
 .text-content p {
     font-size: var(--text-base);
     line-height: var(--leading-normal);
+    opacity: 0.8;
 }
 
 .section-separator {
