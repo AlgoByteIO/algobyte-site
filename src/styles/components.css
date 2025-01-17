@@ -30,6 +30,7 @@
     background: transparent;
     border: none;
     padding: var(--space-2);
+    font-family: 'CustomFont1', sans-serif;
 }
 
 .modal-info {
@@ -78,7 +79,10 @@
 }
 
 .modal-open {
-    font-family: monospace;
+    font-family: 'CustomFont2', sans-serif;
+    font-size: var(--text-lg);
+    letter-spacing: 0.25em;
+    padding: var(--space-2);
 }
 
 
