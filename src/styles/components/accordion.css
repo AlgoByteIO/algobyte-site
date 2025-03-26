@@ -18,7 +18,7 @@
     font-size: 1em;
     transition: all 0.2s ease-in-out;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* Hover effect */
@@ -52,6 +52,8 @@
     outline: none;
 }
 
+/* Add a new class for the last clicked accordion */
+.accordion-header.last-clicked::after,
 .accordion-header:focus::after {
     content: '';
     position: absolute;
@@ -60,12 +62,18 @@
     transform: translateY(-50%);
     width: 0.5rem;
     height: 0.5rem;
-    background: var(--bg-color);
+    background: var(--bg-color); /* Default state (dark) */
     animation: blink 1s step-end infinite;
 }
 
-.accordion-header[aria-expanded="true"]:focus::after {
-    background: var(--text-color);
+/* When accordion is closed (white background), make cursor black */
+.accordion-header:not([aria-expanded="true"])::after {
+    background: var(--bg-color) !important; /* Black cursor on white background */
+}
+
+/* When accordion is open (dark background), make cursor white */
+.accordion-header[aria-expanded="true"]::after {
+    background: var(--text-color) !important; /* White cursor on dark background */
 }
 
 @keyframes blink {

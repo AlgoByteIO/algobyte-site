@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlgoByte Products - AI Agents and Machine Learning Models">
+    <meta name="keywords" content="AI Agents, Machine Learning Models, AI Solutions">
+    <meta name="author" content="AlgoByte">
+    <meta property="og:title" content="AlgoByte - Products">
+    <meta property="og:description" content="Professional AI agents and machine learning models for enterprise systems">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://algobyte.io/products">
+
+    <!-- Favicons -->
+    <link rel="icon" href="src/assets/favicons/algobyte-favicon-light.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="src/assets/favicons/algobyte-favicon-dark.png" media="(prefers-color-scheme: light)">
+
+    <title>AlgoByte - Products</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="src/styles/main.css" as="style">
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Custom fonts with optimized loading -->
+    <link rel="preload" href="src/assets/fonts/Custom1/CustomFont1-A.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/Custom2/CustomFont2-A.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <header>
+        <div class="action-bar">
+            <div class="container">
+                <nav>
+                    <ul class="nav-links">
+                        <li>
+                            <a href="index.html" class="nav-button">
+                                <span class="hotkey">⌥1</span>
+                                <span class="content">Office</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="nav-button">
+                                <span class="hotkey">⌥2</span>
+                                <span class="content">Products</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="catalog.html" class="nav-button">
+                                <span class="hotkey">⌥3</span>
+                                <span class="content">Catalog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="modal-open" class="nav-button">
+                                <span class="hotkey">⌥0</span>
+                                <span class="content">Site Map</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <h1><a href="index.html">AlgoByte</a></h1>
+            <p class="tagline">Applied AI engineering for professional systems.</p>
+            <div class="intro-section">
+                <p class="intro-text">
+                    Product registry for AI agents and machine learning models. 
+                    Each system is engineered for direct integration with existing infrastructure.
+                    Select a product category to view available implementations.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <!-- AI Agents Card -->
+            <div class="card">
+                <span class="card-label">AI AGENTS</span>
+                <div class="content-section">
+                    <div class="text-content">
+                        <p>Autonomous AI systems designed for specific operational domains. Each agent implements formal methods for decision-making, action planning, and outcome verification. Select an agent type to view specifications.</p>
+                    </div>
+                </div>
+                <div class="drawer-container">
+                    <div class="drawer-nav">
+                        <button class="drawer-item active" data-target="agent-1">
+                            <span class="item-marker">▶</span>
+                            Process Control Agent
+                        </button>
+                        <button class="drawer-item" data-target="agent-2">
+                            <span class="item-marker">▶</span>
+                            Data Analysis Agent
+                        </button>
+                        <button class="drawer-item" data-target="agent-3">
+                            <span class="item-marker">▶</span>
+                            System Monitor Agent
+                        </button>
+                    </div>
+                    <div class="drawer-content">
+                        <div id="agent-1" class="drawer-panel active">
+                            <h3>Process Control Agent</h3>
+                            <p>Automated system for monitoring and adjusting operational parameters in real-time. Implements formal control theory with predictive modeling.</p>
+                        </div>
+                        <div id="agent-2" class="drawer-panel">
+                            <h3>Data Analysis Agent</h3>
+                            <p>Autonomous data processing and analysis system. Performs statistical analysis, pattern recognition, and anomaly detection.</p>
+                        </div>
+                        <div id="agent-3" class="drawer-panel">
+                            <h3>System Monitor Agent</h3>
+                            <p>Continuous system monitoring and health checking. Provides early warning and automated response to system anomalies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning Models Card -->
+            <div class="card">
+                <span class="card-label">MACHINE LEARNING MODELS</span>
+                <div class="content-section">
+                    <div class="text-content">
+                        <p>Specialized machine learning models optimized for specific computational tasks. Each model is rigorously tested and validated against industry benchmarks. Select a model type to view specifications.</p>
+                    </div>
+                </div>
+                <div class="drawer-container">
+                    <div class="drawer-nav">
+                        <button class="drawer-item active" data-target="model-1">
+                            <span class="item-marker">▶</span>
+                            Classification Engine
+                        </button>
+                        <button class="drawer-item" data-target="model-2">
+                            <span class="item-marker">▶</span>
+                            Prediction System
+                        </button>
+                        <button class="drawer-item" data-target="model-3">
+                            <span class="item-marker">▶</span>
+                            Pattern Recognition
+                        </button>
+                    </div>
+                    <div class="drawer-content">
+                        <div id="model-1" class="drawer-panel active">
+                            <h3>Classification Engine</h3>
+                            <p>High-precision classification system for complex data structures. Supports multi-class and hierarchical classification tasks.</p>
+                        </div>
+                        <div id="model-2" class="drawer-panel">
+                            <h3>Prediction System</h3>
+                            <p>Advanced predictive modeling system for time-series and sequential data. Implements multiple forecasting methodologies.</p>
+                        </div>
+                        <div id="model-3" class="drawer-panel">
+                            <h3>Pattern Recognition</h3>
+                            <p>Sophisticated pattern detection and analysis system. Identifies complex patterns and relationships in structured and unstructured data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-center">
+                <p class="footer-copyright">AlgoByte &copy; 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <div class="modal-content">
+            <button class="close" aria-label="Close menu">&times;</button>
+            <div class="modal-info">
+                <h2 id="modal-title" class="modal-title">AlgoByte</h2>
+                <p class="modal-subtitle">AI Engineering</p>
+                <hr class="separator">
+                <div class="external-links">
+                    <a href="index.html">Office</a>
+                    <a href="products.html">Products</a>
+                    <a href="catalog.html">Catalog</a>
+                    <a href="https://github.com/AlgoByteIO" target="_blank">Source Control &#8599;</a>
+                    <a href="mailto:info@algobyte.io">info@algobyte.io &#8599;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/modal.js" defer></script>
+    <script src="src/js/drawer.js" defer></script>
+</body>
+</html> 

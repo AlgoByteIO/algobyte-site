@@ -1,5 +1,7 @@
 @import 'components/card.css';
 @import 'components/accordion.css';
+@import 'components/drawer.css';
+@import 'components/catalog.css';
 
 /* Modal Styles */
 .modal {
@@ -33,7 +35,22 @@
     background: transparent;
     border: none;
     padding: var(--space-2);
-    font-family: 'CustomFont1', sans-serif;
+    font-family: 'CustomFont2', sans-serif;
+}
+
+.modal-title {
+    font-family: 'CustomFont2', sans-serif;
+    font-size: 2em;
+    margin-bottom: var(--space-2);
+    text-align: right;
+}
+
+.modal-subtitle {
+    font-family: 'CustomFont2', sans-serif;
+    font-size: 1.2em;
+    margin: 0 0 var(--space-4);
+    text-align: right;
+    opacity: 0.8;
 }
 
 .modal-info {
@@ -42,6 +59,7 @@
     right: var(--space-6);
     text-align: right;
     max-width: 300px;
+    font-family: 'CustomFont2', sans-serif;
 }
 
 .company-name {
@@ -53,16 +71,8 @@
 .separator {
     border: none;
     height: 1px;
-    background-image: repeating-linear-gradient(
-        to right,
-        var(--text-color) 0,
-        var(--text-color) 4px,
-        transparent 4px,
-        transparent 8px
-    );
-    margin: var(--space-6) 0;
-    width: 100%;
-    opacity: 0.5;
+    background: var(--text-color);
+    margin: var(--space-3) 0;
 }
 
 .description {
@@ -74,24 +84,20 @@
 .external-links {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     gap: var(--space-3);
+    margin-top: var(--space-4);
 }
 
 .external-links a {
-    font-family: 'TX02Mono', monospace;
-    font-size: 0.9em;
     color: var(--text-color);
     text-decoration: none;
-    padding: var(--space-2) var(--space-4);
-    background: transparent;
-    border: 1px solid var(--text-color);
-    transition: all 0.2s ease-in-out;
+    font-family: 'CustomFont2', sans-serif;
+    font-size: 1.1em;
+    transition: opacity 0.2s ease;
 }
 
 .external-links a:hover {
-    background: var(--text-color);
-    color: var(--bg-color);
+    opacity: 0.8;
 }
 
 .modal-open {
@@ -187,6 +193,16 @@ h1 {
     color: var(--text-color);
     margin: var(--space-12) 0 var(--space-4);
     text-align: left;
+}
+
+h1 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    opacity: 0.9;
 }
 
 .tagline {
@@ -383,6 +399,22 @@ footer {
     margin: var(--space-4) 0;
 }
 
+/* Main description section styling */
+.card > .content-section {
+    background: var(--text-color);
+    padding: var(--space-4);
+    border: 1px solid var(--text-color);
+}
+
+.card > .content-section .text-content {
+    padding: 0;
+}
+
+.card > .content-section .text-content p {
+    color: var(--bg-color);
+}
+
+/* Rest of existing content section styles */
 .card .content-section img {
     width: 100%;
     height: auto;

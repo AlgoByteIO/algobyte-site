@@ -1,0 +1,81 @@
+.drawer-container {
+    display: flex;
+    margin-top: var(--space-4);
+    border: 1px solid var(--text-color);
+    font-family: var(--font-mono);
+}
+
+.drawer-nav {
+    width: 250px;
+    border-right: 1px solid var(--text-color);
+    background: var(--bg-color);
+    padding: var(--space-2) 0;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.drawer-item:hover {
+    background: color-mix(in srgb, var(--accent-color) 30%, transparent);
+}
+
+.drawer-item.active {
+    background: var(--accent-color);
+}
+
+.item-marker {
+    margin-right: var(--space-2);
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+}
+
+.drawer-item.active .item-marker {
+    transform: rotate(90deg);
+}
+
+.drawer-content {
+    flex: 1;
+    padding: var(--space-4);
+    background: var(--bg-color);
+}
+
+.drawer-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.drawer-panel.active {
+    display: block;
+}
+
+.drawer-panel h3 {
+    font-family: var(--font-mono);
+    font-size: 1.1em;
+    margin: 0 0 var(--space-3);
+    color: var(--text-color);
+}
+
+.drawer-panel p {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+} 

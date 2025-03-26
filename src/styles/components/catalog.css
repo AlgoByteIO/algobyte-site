@@ -1,0 +1,149 @@
+/* Catalog Styles */
+.catalog-section {
+    margin: var(--space-8) 0;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.catalog-title {
+    display: inline-block;
+    padding: var(--space-4) var(--space-8);
+    border: 2px solid var(--text-color);
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.catalog-group {
+    margin-bottom: var(--space-12);
+}
+
+.catalog-group h2 {
+    font-family: var(--font-mono);
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: var(--space-4);
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: var(--space-2);
+}
+
+.catalog-description {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    color: var(--text-color);
+    margin-bottom: var(--space-6);
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Table Styles */
+.catalog-table {
+    width: 100%;
+    overflow-x: auto;
+    margin: var(--space-4) 0;
+    border: 1px solid var(--text-color);
+}
+
+.catalog-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+.catalog-table th {
+    background: var(--text-color);
+    color: var(--bg-color);
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    font-weight: normal;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--text-color);
+    border-right: 1px solid var(--bg-color);
+}
+
+.catalog-table th:last-child {
+    border-right: none;
+}
+
+.catalog-table td {
+    padding: var(--space-2) var(--space-3);
+    color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+}
+
+.catalog-table td:last-child {
+    border-right: none;
+}
+
+.catalog-table tr:last-child td {
+    border-bottom: none;
+}
+
+.catalog-table tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Button Styles */
+.order-button,
+.contact-button {
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.order-button {
+    background: #006400;
+    color: var(--text-color);
+    border-color: #006400;
+}
+
+.contact-button {
+    background: transparent;
+    color: var(--text-color);
+}
+
+.order-button:hover {
+    background: #008000;
+    border-color: #008000;
+}
+
+.contact-button:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .catalog-table {
+        margin: var(--space-4) -20px;
+        width: calc(100% + 40px);
+    }
+
+    .catalog-table table {
+        font-size: 0.8em;
+    }
+
+    .catalog-table td,
+    .catalog-table th {
+        padding: var(--space-2);
+    }
+
+    .order-button,
+    .contact-button {
+        padding: var(--space-1) var(--space-2);
+    }
+} 
