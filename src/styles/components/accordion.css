@@ -1,0 +1,102 @@
+.accordion {
+    width: 100%;
+    margin: var(--space-2) 0;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+    padding: var(--space-3);
+    border: 1px solid var(--text-color);
+    background: var(--text-color);
+    width: 100%;
+    text-align: left;
+    font-family: 'TX02Mono', monospace;
+    color: var(--bg-color) !important;
+    font-size: 1em;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.accordion-header:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Click animation */
+.accordion-header:active {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Flicker animation when expanded */
+@keyframes flicker {
+    0% { opacity: 1; }
+    25% { opacity: 0.8; }
+    50% { opacity: 1; }
+    75% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+.accordion-header[aria-expanded="true"] {
+    animation: flicker 0.3s ease-in-out;
+    background: var(--bg-color);
+    color: var(--text-color) !important;
+    border-color: var(--text-color);
+}
+
+/* Terminal-style focus indicator */
+.accordion-header:focus {
+    outline: none;
+}
+
+.accordion-header:focus::after {
+    content: '';
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--bg-color);
+    animation: blink 1s step-end infinite;
+}
+
+.accordion-header[aria-expanded="true"]:focus::after {
+    background: var(--text-color);
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.accordion-header::before {
+    content: '▼';
+    font-family: 'TX02Mono', monospace;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+    color: inherit;
+}
+
+.accordion-header[aria-expanded="false"]::before {
+    transform: rotate(-90deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 var(--space-3);
+    opacity: 0;
+    border: 1px solid var(--text-color);
+    border-top: none;
+}
+
+.accordion-content[aria-hidden="false"] {
+    max-height: 2000px;
+    padding: var(--space-4) var(--space-3);
+    opacity: 1;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.2s ease-in;
+} 

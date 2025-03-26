@@ -1,0 +1,60 @@
+.card {
+  font-family: var(--font-mono);
+  border: 1px solid var(--text-color);
+  padding: 1.5rem;
+  margin: 2.5rem 0;
+  position: relative;
+  background: var(--bg-color);
+}
+
+/* Nested card effect */
+.card-double {
+  padding: 2rem;
+}
+
+.card-double::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  border: 1px solid var(--text-color);
+}
+
+/* Triple nested card */
+.card-triple {
+  padding: 2.5rem;
+}
+
+.card-triple::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  border: 1px solid var(--text-color);
+}
+
+.card-triple::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  border: 1px solid var(--text-color);
+}
+
+/* Card labels */
+.card-label {
+  position: absolute;
+  top: -0.7em;
+  left: 1rem;
+  padding: 0 0.5rem;
+  background: var(--bg-color);
+  font-family: 'TX02Mono', monospace;
+  font-size: 1em;
+  color: var(--text-color);
+} 
