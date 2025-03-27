@@ -83,6 +83,7 @@
     transform: rotate(90deg);
 }
 
+/* Clean up the accordion content styling */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -91,7 +92,72 @@
     opacity: 0;
     border: 1px solid var(--text-color);
     border-top: none;
-    background: var(--bg-color);
+    background: var(--bg-color); /* Keep simple background */
+    border-radius: 0;
+}
+
+/* Clean up any before/after elements */
+.accordion-content::before {
+    content: none;
+}
+
+.accordion-content .content-section::before {
+    content: none;
+}
+
+/* Remove any additional background styling in accordion content */
+.accordion-content .content-section {
+    background: none;
+    border-left: none;
+}
+
+/* Update text content styling to only have bottom border */
+.accordion-content .text-content p {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    border-left: none;
+    border-bottom: 1px solid var(--accent-color);
+    padding: var(--space-3);
+    margin: 0;
+}
+
+/* Add styling for the spec-list to match paragraphs */
+.accordion-content .text-content .spec-list {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    border-bottom: 1px solid var(--accent-color);
+    padding: var(--space-3);
+    margin: 0;
+    list-style-position: inside; /* Keep bullets inside the background */
+}
+
+/* Add some spacing between list items */
+.accordion-content .text-content .spec-list li {
+    margin-bottom: var(--space-1);
+}
+
+/* Add spacing between the paragraphs and list */
+.accordion-content .text-content p + .spec-list {
+    margin-top: var(--space-2);
+}
+
+.accordion-content .text-content .spec-list + p {
+    margin-top: var(--space-2);
+}
+
+/* Add more spacing for text-only sections */
+.accordion-content .text-content {
+    width: 100%;
+    margin: 0;
+}
+
+/* Update spec blocks to match the same style */
+.accordion-content .spec-block p {
+    background: rgba(0, 0, 0, 0.2);
+    border-left: none; /* Remove left border */
+    border-bottom: 1px solid var(--accent-color); /* Keep only bottom border */
+    padding: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
 .accordion-content[aria-hidden="false"] {
@@ -99,4 +165,38 @@
     padding: var(--space-4) var(--space-3);
     opacity: 1;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.2s ease-in;
+}
+
+/* Create a unified container for text and lists in Service Classifications */
+.accordion-content .text-content.unified-block {
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--accent-color);
+    padding: var(--space-3);
+    margin: 0;
+}
+
+/* Remove background and border from individual elements within unified block */
+.accordion-content .text-content.unified-block p {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-bottom: var(--space-2);
+}
+
+.accordion-content .text-content.unified-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style list inside unified block */
+.accordion-content .text-content.unified-block .spec-list {
+    background: none;
+    border: none;
+    padding: 0 0 0 var(--space-4); /* Add indentation */
+    margin: 0 0 var(--space-2) 0;
+    list-style-position: outside; /* Move bullets outside for better indentation */
+}
+
+/* Fix spacing between list items */
+.accordion-content .text-content.unified-block .spec-list li {
+    margin-bottom: var(--space-1);
 } 

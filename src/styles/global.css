@@ -7,6 +7,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Hide content or use fallback until fonts are loaded */
+}
+
+/* When fonts have loaded, ensure smooth transitions */
+body.fonts-loaded {
+    /* Content becomes visible with proper fonts */
+    transition: opacity 0.2s ease;
 }
 
 /* Typography */

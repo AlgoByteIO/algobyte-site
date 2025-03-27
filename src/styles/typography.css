@@ -32,4 +32,37 @@
 
 html {
     font-size: var(--base-font-size);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    :root {
+        /* Slightly adjusted scale for tablets */
+        --scale-ratio: 1.2;
+        
+        --text-xl: 1.8rem;    /* Smaller heading size */
+        --text-2xl: 2.2rem;   /* Smaller large heading */
+        --text-3xl: 2.6rem;   /* Reduce very large headings */
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        /* More compressed scale for mobile */
+        --scale-ratio: 1.15;
+        
+        --text-xs: 0.75rem;     /* 12px */
+        --text-sm: 0.875rem;    /* 14px */
+        --text-base: 1rem;      /* 16px */
+        --text-lg: 1.25rem;     /* 20px */
+        --text-xl: 1.5rem;      /* 24px */
+        --text-2xl: 1.875rem;   /* 30px */
+        --text-3xl: 2.25rem;    /* 36px */
+        --text-4xl: 2.75rem;    /* 44px */
+        --text-5xl: 3.25rem;    /* 52px */
+        
+        /* Adjust spacing for mobile */
+        --space-12: 2.5rem;    /* Reduce larger spaces */
+        --space-16: 3rem;      /* Reduce larger spaces */
+    }
 } 

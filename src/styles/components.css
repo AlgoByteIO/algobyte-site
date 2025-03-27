@@ -250,11 +250,75 @@ h1 a:hover {
     .content {
         flex-grow: 1;
     }
+
+    /* Modal adjustments */
+    .modal-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .modal-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .description {
+        font-size: var(--text-xl);
+    }
+    
+    .company-name {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Card content adjustments */
+    .card .text-content h2 {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-3);
+    }
+    
+    .card .text-content p {
+        font-size: var(--text-xs);
+        line-height: var(--leading-normal);
+    }
+    
+    /* Footer text adjustments */
+    .footer-copyright {
+        font-size: var(--text-sm);
+    }
+    
+    .footer-address {
+        font-size: var(--text-xs);
+    }
+    
+    /* Tagline & intro adjustments */
+    .tagline {
+        font-size: var(--text-lg);
+        margin: 0 0 var(--space-4);
+    }
+    
+    .intro-text {
+        font-size: var(--text-sm);
+    }
+    
+    /* Accordion and cards consistency */
+    .accordion-header,
+    .card-label {
+        font-size: var(--text-base);
+    }
+    
+    /* Spec elements */
+    .spec-block,
+    .spec-list {
+        font-size: var(--text-xs);
+    }
+    
+    .naics-badge {
+        font-size: var(--text-xs);
+        padding: 0.2em 0.4em;
+    }
 }
 
 /* Footer Styles */
 footer {
-    margin-top: var(--space-8);
+    margin-top: 0;
     padding: var(--space-8) 0;
     position: relative;
 }
@@ -339,10 +403,6 @@ footer {
 
 .spec-block a:hover {
     opacity: 0.8;
-}
-
-.naics-section {
-    margin-top: var(--space-4) !important;
 }
 
 @media (max-width: 768px) {
@@ -532,4 +592,90 @@ footer {
     width: 100%;
     height: auto;
     opacity: 0.9;
+}
+
+/* Mobile Typography Adjustments */
+@media (max-width: 480px) {
+    /* Modal adjustments */
+    .modal-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .modal-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .description {
+        font-size: var(--text-xl);
+    }
+    
+    .company-name {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Card content adjustments */
+    .card .text-content h2 {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-3);
+    }
+    
+    .card .text-content p {
+        font-size: var(--text-xs);
+        line-height: var(--leading-normal);
+    }
+    
+    /* Footer text adjustments */
+    .footer-copyright {
+        font-size: var(--text-sm);
+    }
+    
+    .footer-address {
+        font-size: var(--text-xs);
+    }
+    
+    /* Tagline & intro adjustments */
+    .tagline {
+        font-size: var(--text-lg);
+        margin: 0 0 var(--space-4);
+    }
+    
+    .intro-text {
+        font-size: var(--text-sm);
+    }
+    
+    /* Accordion and cards consistency */
+    .accordion-header,
+    .card-label {
+        font-size: var(--text-base);
+    }
+    
+    /* Spec elements */
+    .spec-block,
+    .spec-list {
+        font-size: var(--text-xs);
+    }
+    
+    .naics-badge {
+        font-size: var(--text-xs);
+        padding: 0.2em 0.4em;
+    }
+}
+
+/* Ensure font consistency between orientations */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    :root {
+        /* Maintain the mobile font sizes in landscape */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+    }
+    
+    /* Further reduce some spacing in landscape */
+    .modal-content {
+        padding: var(--space-2);
+    }
+    
+    .intro-section {
+        margin-bottom: var(--space-4);
+    }
 }

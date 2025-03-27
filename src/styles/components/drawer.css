@@ -25,6 +25,7 @@
     text-align: left;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    position: relative;
 }
 
 .drawer-item:hover {
@@ -48,12 +49,21 @@
 .drawer-content {
     flex: 1;
     padding: var(--space-4);
-    background: var(--bg-color);
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    position: relative;
+    overflow: hidden;
+    border-left: 3px solid var(--accent-color);
+}
+
+.drawer-content::before {
+    content: none;
 }
 
 .drawer-panel {
     display: none;
     animation: fadeIn 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .drawer-panel.active {
@@ -65,6 +75,8 @@
     font-size: 1.1em;
     margin: 0 0 var(--space-3);
     color: var(--text-color);
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .drawer-panel p {
@@ -73,9 +85,58 @@
     line-height: 1.6;
     margin: 0;
     color: var(--text-color);
+    background: rgba(0, 0, 0, 0.2);
+    padding: var(--space-3);
+    border-radius: 0;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media (max-width: 767px) {
+    .drawer-container {
+        flex-direction: column;
+    }
+    
+    .drawer-nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--text-color);
+    }
+    
+    .drawer-content {
+        border-left: none;
+        border-top: 3px solid var(--accent-color);
+        min-height: 200px;
+    }
+    
+    .drawer-panel p {
+        font-size: 0.85em;
+        padding: var(--space-2);
+    }
+}
+
+/* Change the active::after selector to only target last-clicked elements */
+.drawer-item.active::after {
+    /* Remove this selector so active items don't always show the cursor */
+    content: none;
+}
+
+.drawer-item.last-clicked::after {
+    content: '';
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--text-color);
+    animation: blink 1s step-end infinite;
+}
+
+/* Reuse the same blink animation from accordion.css */
+@keyframes blink {
+    50% { opacity: 0; }
 } 

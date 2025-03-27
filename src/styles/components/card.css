@@ -57,4 +57,46 @@
   font-family: 'TX02Mono', monospace;
   font-size: 1em;
   color: var(--text-color);
+}
+
+/* Add this to target specifically the content sections inside cards on the products page */
+.card .content-section {
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+    position: relative;
+    overflow: hidden;
+    border-left: 3px solid var(--accent-color);
+    margin-top: var(--space-3);
+    padding: var(--space-4);
+}
+
+/* Remove the diagonal stripes from card content sections */
+.card .content-section::before {
+    content: none; /* Remove the stripes */
+}
+
+/* Style the text content within the section to make it more visually interesting */
+.card .content-section .text-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove rounded corners from text content */
+.card .content-section .text-content p {
+    border-radius: 0; /* Change from 3px to 0 */
+    background: rgba(0, 0, 0, 0.2);
+    padding: var(--space-3);
+    margin: 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* Adjust for mobile */
+@media (max-width: 767px) {
+    .card .content-section {
+        padding: var(--space-3);
+    }
+    
+    .card .content-section .text-content p {
+        padding: var(--space-2);
+        font-size: 0.85em;
+    }
 } 

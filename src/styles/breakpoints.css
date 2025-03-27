@@ -24,16 +24,29 @@
     }
 
     header nav ul {
-        justify-content: flex-end;
-    }
-
-    header nav ul li:not(:first-child):not(:last-child) {
-        display: none;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
     }
 
     header nav ul li:first-child {
-        margin-right: auto;
+        margin-right: 0;
     }
+    
+    header nav ul li a {
+        padding: var(--space-1);
+        font-size: 0.85rem;
+    }
+    
+    header nav ul li a .hotkey {
+        font-size: 0.7rem;
+    }
+
+    /* Temporarily comment out this rule to see all links */
+    /* header nav ul li:not(:first-child):not(:last-child) {
+        display: none;
+    } */
 }
 
 /* Medium devices (large phones) */
