@@ -1,72 +1,49 @@
-// Modal functionality
-const initModal = () => {
-    const modal = document.getElementById("modal");
-    const modalOpen = document.getElementById("modal-open");
-    const closeBtn = document.getElementsByClassName("close")[0];
-
-    modalOpen.onclick = function(e) {
-        e.preventDefault();
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
-    }
-
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    }
-};
-
-// Initialize modal when DOM is fully loaded
+// Single, clean implementation for modal functionality
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Modal script loaded and running");
+    
+    // Get modal elements
     const modal = document.getElementById('modal');
     const modalOpen = document.getElementById('modal-open');
     const closeButton = document.querySelector('.close');
-
-    // Modal functionality
+    
+    if (!modal || !modalOpen || !closeButton) {
+        console.error("Modal elements not found on this page");
+        return;
+    }
+    
+    console.log("Modal elements found successfully");
+    
+    // Open modal
     modalOpen.addEventListener('click', (e) => {
         e.preventDefault();
+        console.log("Modal open clicked");
         modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     });
-
+    
+    // Close modal with button
     closeButton.addEventListener('click', () => {
+        console.log("Modal close clicked");
         modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
     });
-
+    
+    // Close modal when clicking outside
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
+            console.log("Modal background clicked");
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
-
-    // Keyboard navigation
+    
+    // Escape key to close modal
     document.addEventListener('keydown', (e) => {
-        // Only trigger if Alt key is pressed with a number
-        if (e.altKey && !e.ctrlKey && !e.metaKey) {
-            const key = e.key;
-            const links = document.querySelectorAll('.nav-links a[data-key]');
-            
-            links.forEach(link => {
-                if (link.getAttribute('data-key') === key) {
-                    e.preventDefault();
-                    if (link.id === 'modal-open') {
-                        modal.style.display = 'block';
-                    } else {
-                        link.click();
-                    }
-                }
-            });
-        }
-
-        // Close modal with Escape key
         if (e.key === 'Escape' && modal.style.display === 'block') {
+            console.log("Escape pressed, closing modal");
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
 }); 

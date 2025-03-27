@@ -97,6 +97,6 @@
     
     .card .content-section .text-content p {
         padding: var(--space-2);
-        font-size: 0.85em;
+        font-size: var(--text-sm);
     }
 } 

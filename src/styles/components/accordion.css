@@ -173,6 +173,28 @@
     border-bottom: 1px solid var(--accent-color);
     padding: var(--space-3);
     margin: 0;
+    max-width: 100%; /* Ensure it doesn't overflow its container */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-wrap: break-word; /* Handle long text better */
+}
+
+/* Make sure content inside unified block respects container width */
+.accordion-content .text-content.unified-block p,
+.accordion-content .text-content.unified-block .spec-list {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* For mobile, add more breathing room on the sides */
+@media (max-width: 480px) {
+    .accordion-content .text-content.unified-block {
+        padding: var(--space-3) var(--space-2);
+    }
+    
+    /* Adjust the list indentation for small screens */
+    .accordion-content .text-content.unified-block .spec-list {
+        padding-left: var(--space-3); /* Slightly reduce indentation */
+    }
 }
 
 /* Remove background and border from individual elements within unified block */

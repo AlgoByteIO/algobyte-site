@@ -36,25 +36,25 @@
                 <nav>
                     <ul class="nav-links">
                         <li>
-                            <a href="/" class="nav-button">
+                            <a href="/" class="nav-button" data-key="1">
                                 <span class="hotkey">⌥1</span>
                                 <span class="content">Office</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/products" class="nav-button">
+                            <a href="/products" class="nav-button" data-key="2">
                                 <span class="hotkey">⌥2</span>
                                 <span class="content">Products</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/catalog" class="nav-button">
+                            <a href="/catalog" class="nav-button" data-key="3">
                                 <span class="hotkey">⌥3</span>
                                 <span class="content">Catalog</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="modal-open" class="nav-button">
+                            <a href="#" id="modal-open" class="nav-button" data-key="0">
                                 <span class="hotkey">⌥0</span>
                                 <span class="content">Menu</span>
                             </a>
@@ -188,7 +188,7 @@
                             <p>CAGE: 9PX07</p>
                             <p>UEI: T93PNFX1CWR1</p>
                             <p>
-                                <strong>NAICS Codes:</strong><br>
+                                NAICS Codes:<br>
                                 541330 - Engineering Services<br>
                                 541511 - Custom Computer Programming Services<br>
                                 541618 - Other Management Consulting Services<br>
@@ -237,6 +237,7 @@
         </div>
     </footer>
 
+    <script src="src/js/keyboard-nav.js" defer></script>
     <script src="src/js/modal.js" defer></script>
     <script src="src/js/accordion.js" defer></script>
     <script src="src/js/font-loader.js" defer></script>
