@@ -10,12 +10,12 @@
     cursor: pointer;
     padding: var(--space-3);
     border: 1px solid var(--text-color);
-    background: var(--text-color);
+    background: var(--accent-color);
     width: 100%;
     text-align: left;
-    font-family: 'TX02Mono', monospace;
-    color: var(--bg-color) !important;
-    font-size: 1em;
+    font-family: var(--font-mono);
+    color: var(--text-color);
+    font-size: 0.9em;
     transition: all 0.2s ease-in-out;
     position: relative;
     overflow: visible;
@@ -23,12 +23,12 @@
 
 /* Hover effect */
 .accordion-header:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: color-mix(in srgb, var(--accent-color) 30%, transparent);
 }
 
 /* Click animation */
 .accordion-header:active {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--accent-color);
 }
 
 /* Flicker animation when expanded */
@@ -43,7 +43,7 @@
 .accordion-header[aria-expanded="true"] {
     animation: flicker 0.3s ease-in-out;
     background: var(--bg-color);
-    color: var(--text-color) !important;
+    color: var(--text-color);
     border-color: var(--text-color);
 }
 
@@ -62,18 +62,8 @@
     transform: translateY(-50%);
     width: 0.5rem;
     height: 0.5rem;
-    background: var(--bg-color); /* Default state (dark) */
+    background: var(--text-color);
     animation: blink 1s step-end infinite;
-}
-
-/* When accordion is closed (white background), make cursor black */
-.accordion-header:not([aria-expanded="true"])::after {
-    background: var(--bg-color) !important; /* Black cursor on white background */
-}
-
-/* When accordion is open (dark background), make cursor white */
-.accordion-header[aria-expanded="true"]::after {
-    background: var(--text-color) !important; /* White cursor on dark background */
 }
 
 @keyframes blink {
@@ -81,15 +71,16 @@
 }
 
 .accordion-header::before {
-    content: '▼';
-    font-family: 'TX02Mono', monospace;
+    content: '▶';
+    font-family: var(--font-mono);
     font-size: 0.8em;
     transition: transform 0.3s ease;
     color: inherit;
+    margin-right: var(--space-2);
 }
 
-.accordion-header[aria-expanded="false"]::before {
-    transform: rotate(-90deg);
+.accordion-header[aria-expanded="true"]::before {
+    transform: rotate(90deg);
 }
 
 .accordion-content {
@@ -100,6 +91,7 @@
     opacity: 0;
     border: 1px solid var(--text-color);
     border-top: none;
+    background: var(--bg-color);
 }
 
 .accordion-content[aria-hidden="false"] {
